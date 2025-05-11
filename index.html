@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PT Garudafood - Leading Food & Beverage Company</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#ED0606", secondary: "" },
+            borderRadius: {
+              none: "0px",
+              sm: "2px",
+              DEFAULT: "4px",
+              md: "8px",
+              lg: "12px",
+              xl: "16px",
+              "2xl": "20px",
+              "3xl": "24px",
+              full: "9999px",
+              button: "4px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+          font-family: 'Poppins', sans-serif;
+      }
+      .hero-section {
+          background-image: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.7) 40%, transparent 70%), url('https://readdy.ai/api/search-image?query=modern%20food%20production%20facility%20with%20clean%20environment%2C%20bright%20lighting%2C%20professional%20food%20processing%20equipment%2C%20workers%20in%20uniform%2C%20high%20quality%20food%20products%20visible%2C%20professional%20photography%2C%20corporate%20style%2C%20clean%20lines&width=1600&height=800&seq=123&orientation=landscape');
+          background-size: cover;
+          background-position: center right;
+      }
+      input:focus, textarea:focus {
+          outline: none;
+          border-color: #ED0606;
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+      }
+      .custom-checkbox {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+      }
+      .custom-checkbox input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+      }
+      .checkmark {
+          height: 20px;
+          width: 20px;
+          background-color: #fff;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          position: relative;
+      }
+      .custom-checkbox input:checked ~ .checkmark {
+          background-color: #ED0606;
+          border-color: #ED0606;
+      }
+      .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none;
+      }
+      .custom-checkbox input:checked ~ .checkmark:after {
+          display: block;
+          left: 7px;
+          top: 3px;
+          width: 6px;
+          height: 10px;
+          border: solid white;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <a href="#" class="text-2xl font-['Pacifico'] text-primary"
+          >PT.Garudafood</a
+        >
+
+        <nav class="hidden md:flex space-x-8">
+          <a
+            href="#home"
+            class="text-primary font-medium hover:text-primary/80 transition-colors"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="text-gray-700 font-medium hover:text-primary transition-colors"
+            >Tentang</a
+          >
+          <a
+            href="#products"
+            class="text-gray-700 font-medium hover:text-primary transition-colors"
+            >Produk</a
+          >
+          <a
+            href="#innovation"
+            class="text-gray-700 font-medium hover:text-primary transition-colors"
+            >Inovasi</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-700 font-medium hover:text-primary transition-colors"
+            >Kontak</a
+          >
+        </nav>
+
+        <button
+          class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700"
+        >
+          <i class="ri-menu-line ri-lg"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="fixed inset-0 bg-white z-40 hidden flex-col pt-16 px-4">
+      <a
+        href="#home"
+        class="py-4 text-primary font-medium border-b border-gray-100"
+        >Home</a
+      >
+      <a
+        href="#about"
+        class="py-4 text-gray-700 font-medium border-b border-gray-100"
+        >Tentang</a
+      >
+      <a
+        href="#products"
+        class="py-4 text-gray-700 font-medium border-b border-gray-100"
+        >Produk</a
+      >
+      <a
+        href="#innovation"
+        class="py-4 text-gray-700 font-medium border-b border-gray-100"
+        >Inovasi</a
+      >
+      <a href="#contact" class="py-4 text-gray-700 font-medium">Kontak</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="hero-section min-h-screen pt-20 flex items-center"
+    >
+      <div class="container mx-auto px-4 py-20 w-full">
+        <div class="max-w-2xl">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            P5 Kebekerjaan
+          </h1>
+          <p class="text-lg text-gray-700 mb-8">
+            Pada P5 kebekerjaan ini kita dari X TKJ 4 melakukan kunjungan industy ke PT.GarudaFood
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button
+              class="bg-primary text-white px-6 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors"
+            >
+              Temukan Produk
+            </button>
+            <button
+              class="bg-white text-primary border border-primary px-6 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-gray-50 transition-colors"
+            >
+              Pelajari tentang web
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Tentang PT.GarudaFood
+          </h2>
+          <div class="w-20 h-1 bg-primary mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+              Pembahasan
+            </h3>
+            <p class="text-gray-700 mb-4">
+              PT Garudafood Putra Putri Jaya Tbk PT Garudafood Putra Putri Jaya Tbk
+              adalah perusahaan makanan dan minuman terkemuka di Indonesia yang dikenal
+              dengan produk-produk berkualitas seperti Kacang Garuda, Gery, dan Chocolatos.
+              Didirikan pada tahun 1990, PT Garudafood berawal dari usaha keluarga yang kini berkembang menjadi
+              perusahaan berskala nasional dan internasional.
+            </p>
+            <p class="text-gray-700 mb-6">
+              Garudafood berkomitmen menyediakan produk inovatif dan bermutu tinggi,
+              dengan jaringan distribusi yang mencakup lebih dari 30 negara.
+              Sebagai perusahaan publik dengan kode saham GOOD, PT Garudafood terus berinovasi
+              dalam industri makanan dan minuman, mengedepankan kualitas, integritas, dan keberlanjutan.
+            </p>
+            <div class="grid grid-cols-2 gap-6">
+              <div class="bg-gray-50 p-6 rounded-lg">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4"
+                >
+                  <i class="ri-store-2-line ri-lg text-primary"></i>
+                </div>
+                <h4 class="text-xl font-semibold text-gray-800 mb-2">20+</h4>
+                <p class="text-gray-600"> Negara secara global.</p>
+              </div>
+              <div class="bg-gray-50 p-6 rounded-lg">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4"
+                >
+                  <i class="ri-user-heart-line ri-lg text-primary"></i>
+                </div>
+                <h4 class="text-xl font-semibold text-gray-800 mb-2">10M+</h4>
+                <p class="text-gray-600">Pelanggan</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src="lowongan-kerja-pt-garudafood-putra-putri-jaya.jpg"
+              alt="PT Garudafood Headquarters"
+              class="rounded-lg shadow-lg w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Produk Kami</h2>
+          <p class="text-gray-700 max-w-2xl mx-auto">
+           Ini dia beberapa inovasi produk dari kami
+          </p>
+          <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Product 1 -->
+          <div
+            class="bg-white rounded-lg shadow-sm overflow-hidden transition-transform hover:shadow-md hover:-translate-y-1"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="Garuda KAcang.jpg"
+                alt="Garuda Peanuts"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Garuda Kacang
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Produk unggulan kami menampilkan kacang panggang berkualitas
+                premium dengan kerenyahan dan cita rasa yang sempurna.
+              </p>
+              <a
+                href="#"
+                class="text-primary font-medium flex items-center hover:text-primary/80 transition-colors"
+              >
+                Lihat Selengkapnya
+                <i class="ri-arrow-right-line ri-sm ml-1"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div
+            class="bg-white rounded-lg shadow-sm overflow-hidden transition-transform hover:shadow-md hover:-translate-y-1"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="choco.jpg"
+                alt="Chocolatos"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Chocolatos
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Stik wafer isi cokelat yang lezat, menawarkan kombinasi
+                sempurna antara kerenyahan dan cokelat yang creamy.
+              </p>
+              <a
+                href="#"
+                class="text-primary font-medium flex items-center hover:text-primary/80 transition-colors"
+              >
+                Lihat Selengkapnya
+                <i class="ri-arrow-right-line ri-sm ml-1"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div
+            class="bg-white rounded-lg shadow-sm overflow-hidden transition-transform hover:shadow-md hover:-translate-y-1"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="Mountea.jpg"
+                alt="Mountea"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">Mountea</h3>
+              <p class="text-gray-600 mb-4">
+                Minuman teh yang menyegarkan, dibuat dari daun teh premium,
+                menawarkan keseimbangan sempurna antara rasa dan kesegaran.
+              </p>
+              <a
+                href="#"
+                class="text-primary font-medium flex items-center hover:text-primary/80 transition-colors"
+              >
+                Lihat Selengkapnya
+                <i class="ri-arrow-right-line ri-sm ml-1"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div
+            class="bg-white rounded-lg shadow-sm overflow-hidden transition-transform hover:shadow-md hover:-translate-y-1"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="Gerry.jpg"
+                alt="Gery Crackers"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Gery 
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Biskuit renyah dan penuh rasa yang tersedia dalam berbagai
+                varian lezat, sempurna untuk camilan kapan saja.
+              </p>
+              <a
+                href="#"
+                class="text-primary font-medium flex items-center hover:text-primary/80 transition-colors"
+              >
+                Lihat Selengkapnya
+                <i class="ri-arrow-right-line ri-sm ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <button
+            class="bg-white text-primary border border-primary px-6 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-gray-50 transition-colors"
+          >
+            Lihat Semua Produk
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Innovation Section -->
+    <section id="innovation" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Inovasi dan Pertumbuhan
+          </h2>
+          <p class="text-gray-700 max-w-2xl mx-auto">
+            Di PT Garudafood, inovasi adalah inti dari
+            segala yang kami lakukan. Kami terus berusaha untuk
+            mengembangkan produk baru dan memperbaiki proses kami.
+          </p>
+          <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-16">
+          <div>
+            <img
+              src="OIP.jpg"
+              alt="Innovation Center"
+              class="rounded-lg shadow-lg w-full h-auto object-cover mb-8"
+            />
+
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+              Riset dan Pengembangan.
+            </h3>
+            <p class="text-gray-700 mb-6">
+              Tim R&D kami yang berdedikasi bekerja tanpa henti untuk mengembangkan
+              produk-produk baru yang memenuhi kebutuhan dan preferensi
+              konsumen yang terus berkembang. Dengan menggunakan fasilitas
+              canggih dan teknologi makanan terbaru, kami memastikan bahwa setiap
+              produk yang membawa nama Garudafood memenuhi standar tinggi kami dalam
+              hal kualitas dan rasa.
+            </p>
+
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4"
+              >
+                <i class="ri-flask-line ri-lg text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-800">
+                  Fasilitas Uji Canggih.
+                </h4>
+                <p class="text-gray-600">Menjamin keselamatan dan kualitas produk.</p>
+              </div>
+            </div>
+
+            <div class="flex items-center">
+              <div
+                class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4"
+              >
+                <i class="ri-team-line ri-lg text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-800">
+                  Ilmuwan Pangan Ahli.
+                </h4>
+                <p class="text-gray-600">
+                  Mengembangkan resep dan formulasi inovatif.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-semibold text-gray-800 mb-6">
+              Garis Waktu Inovasi Kami.
+            </h3>
+
+            <div class="space-y-8">
+              <div class="flex">
+                <div class="flex flex-col items-center mr-6">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-primary text-white rounded-full"
+                  >
+                    <i class="ri-calendar-line ri-lg"></i>
+                  </div>
+                  <div class="h-full w-0.5 bg-gray-200 mt-2"></div>
+                </div>
+                <div class="pt-2">
+                  <h4 class="text-xl font-medium text-gray-800 mb-2">1990</h4>
+                  <p class="text-gray-700 mb-2">
+                    Didirikan sebagai usaha keluarga kecil yang mengkhususkan diri dalam camilan kacang.
+                  </p>
+                  <p class="text-gray-600">
+                    Meluncurkan produk Garuda Kacang
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex">
+                <div class="flex flex-col items-center mr-6">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-primary text-white rounded-full"
+                  >
+                    <i class="ri-store-line ri-lg"></i>
+                  </div>
+                  <div class="h-full w-0.5 bg-gray-200 mt-2"></div>
+                </div>
+                <div class="pt-2">
+                  <h4 class="text-xl font-medium text-gray-800 mb-2">2000</h4>
+                  <p class="text-gray-700 mb-2">
+                    Memperluas lini produk untuk mencakup permen dan biskuit.
+                  </p>
+                  <p class="text-gray-600">
+                    Memperkenalkan merek Gery ke pasar.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex">
+                <div class="flex flex-col items-center mr-6">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-primary text-white rounded-full"
+                  >
+                    <i class="ri-global-line ri-lg"></i>
+                  </div>
+                  <div class="h-full w-0.5 bg-gray-200 mt-2"></div>
+                </div>
+                <div class="pt-2">
+                  <h4 class="text-xl font-medium text-gray-800 mb-2">2010</h4>
+                  <p class="text-gray-700 mb-2">
+                    Memulai ekspansi internasional ke pasar Asia Tenggara.
+                  </p>
+                  <p class="text-gray-600">
+                   Meluncurkan Chocolatos, yang dengan cepat menjadi pemimpin pasar.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex">
+                <div class="flex flex-col items-center mr-6">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-primary text-white rounded-full"
+                  >
+                    <i class="ri-rocket-line ri-lg"></i>
+                  </div>
+                </div>
+                <div class="pt-2">
+                  <h4 class="text-xl font-medium text-gray-800 mb-2">
+                    2020-Saat Ini
+                  </h4>
+                  <p class="text-gray-700 mb-2">
+                    Mengadopsi transformasi digital dan praktik berkelanjutan.
+                  </p>
+                  <p class="text-gray-600">
+                   Mengembangkan lini produk baru dengan fokus pada kesehatan dan kebugaran.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Kontak Kami</h2>
+          <p class="text-gray-700 max-w-2xl mx-auto">
+            Punya pertanyaan atau masukan? Kami senang mendengarnya. Hubungi tim kami.
+          </p>
+          <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+          <div class="bg-white rounded-lg shadow-sm p-8">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-6">
+              Send Us a Message
+            </h3>
+
+            <form>
+              <div class="mb-6">
+                <label for="name" class="block text-gray-700 mb-2"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-md text-gray-800"
+                  placeholder="Enter your name"
+                />
+              </div>
+
+              <div class="mb-6">
+                <label for="email" class="block text-gray-700 mb-2"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-md text-gray-800"
+                  placeholder="Enter your email"
+                />
+              </div>
+
+              <div class="mb-6">
+                <label for="subject" class="block text-gray-700 mb-2"
+                  >Subject</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-md text-gray-800"
+                  placeholder="Enter subject"
+                />
+              </div>
+
+              <div class="mb-6">
+                <label for="message" class="block text-gray-700 mb-2"
+                  >Pesan</label
+                >
+                <textarea
+                  id="message"
+                  rows="4"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-md text-gray-800"
+                  placeholder="Enter your message"
+                ></textarea>
+              </div>
+
+              <label class="custom-checkbox mb-6 flex items-start">
+                <input type="checkbox" />
+                <span class="checkmark mr-3 mt-0.5"></span>
+                <span class="text-gray-700"
+                  >I agree to the processing of my personal data in accordance
+                  with the Privacy Policy</span
+                >
+              </label>
+
+              <button
+                type="submit"
+                class="bg-primary text-white px-6 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors w-full"
+              >
+                Kirim Pesan
+              </button>
+            </form>
+          </div>
+
+          <div>
+            <div class="bg-white rounded-lg shadow-sm p-8 mb-8">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-6">
+                Informasi Kontak
+              </h3>
+
+              <div class="space-y-6">
+                <div class="flex">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mr-4"
+                  >
+                    <i class="ri-map-pin-line ri-lg text-primary"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-800 mb-1">Lokasi Kantor</h4>
+                    <p class="text-gray-600">
+                      Jl. Raya Krikilan KM 28, Desa Krikilan, Kecamatan Driyorejo,
+                      Kabupaten Gresik, Jawa Timur 61177. 
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mr-4"
+                  >
+                    <i class="ri-phone-line ri-lg text-primary"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-800 mb-1">No. Handphone</h4>
+                    <p class="text-gray-600">+62 822 455 082 48</p>
+                  </div>
+                </div>
+
+                <div class="flex">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mr-4"
+                  >
+                    <i class="ri-mail-line ri-lg text-primary"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-800 mb-1">Email</h4>
+                    <p class="text-gray-600">corporate@garudafood.co.id</p>
+                  </div>
+                </div>
+
+                <div class="flex">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mr-4"
+                  >
+                    <i class="ri-time-line ri-lg text-primary"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-800 mb-1">
+                      Business Hours
+                    </h4>
+                    <p class="text-gray-600">
+                      Monday - Friday: 8:00 AM - 5:00 PM
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-sm p-8">
+              <h3 class="text-xl font-semibold text-gray-800 mb-4">
+                Kontak Kami
+              </h3>
+              <p class="text-gray-700 mb-6">
+                Follow IG @alfatihbdllh untuk info desain web lebih lengkap
+              </p>
+
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-colors"
+                >
+                  <i class="ri-facebook-fill ri-lg"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-colors"
+                >
+                  <i class="ri-twitter-fill ri-lg"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-colors"
+                >
+                  <i class="ri-instagram-fill ri-lg"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-colors"
+                >
+                  <i class="ri-linkedin-fill ri-lg"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-colors"
+                >
+                  <i class="ri-youtube-fill ri-lg"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <a
+              href="#"
+              class="text-2xl font-['Pacifico'] text-white mb-4 inline-block"
+              >Garudafood</a
+            >
+            <p class="text-gray-400 mb-6">
+              Menyuburkan kehidupan melalui produk makanan berkualitas sejak tahun 1990.
+            PT Garudafood berkomitmen untuk menghadirkan produk makanan dan
+            minuman yang inovatif dan berkualitas tinggi
+             kepada konsumen di seluruh dunia.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <i class="ri-facebook-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <i class="ri-twitter-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <i class="ri-instagram-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <i class="ri-linkedin-fill ri-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#home"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Tentang Kami</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#products"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Produk</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#innovation"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Inovasi</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Kontak</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Karir</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Keberlanjutan</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+            <p class="text-gray-400 mb-4">
+              Ikuti Instagram @alfatihbdllh untuk jasa 
+              pembuatan dan desain website dll.
+            </p>
+
+            <form class="mb-4">
+              <div class="flex">
+                <input
+                  type="email"
+                  class="flex-grow px-4 py-2 bg-gray-800 border-none text-white rounded-l-md focus:outline-none"
+                  placeholder="Your email address"
+                />
+                <button
+                  type="submit"
+                  class="bg-primary text-white px-4 py-2 !rounded-r-md whitespace-nowrap hover:bg-primary/90 transition-colors"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
+
+            <p class="text-gray-500 text-sm">
+              Dengan berlangganan, Anda setuju dengan Kebijakan
+              Privasi kami dan memberikan persetujuan untuk menerima
+              pembaruan dari perusahaan kami.
+            </p>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-500 mb-4 md:mb-0">
+              &copy; 2025 PT Garudafood. All rights reserved.
+            </p>
+            <div class="flex space-x-6">
+              <a
+                href="#"
+                class="text-gray-500 hover:text-white transition-colors text-sm"
+                >Privacy Policy</a
+              >
+              <a
+                href="#"
+                class="text-gray-500 hover:text-white transition-colors text-sm"
+                >Terms of Service</a
+              >
+              <a
+                href="#"
+                class="text-gray-500 hover:text-white transition-colors text-sm"
+                >Cookie Policy</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Mobile menu toggle
+        const menuButton = document.querySelector(".md\\:hidden");
+        const mobileMenu = document.querySelector(".fixed.inset-0.bg-white");
+
+        menuButton.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+          mobileMenu.classList.toggle("flex");
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll("a");
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.add("hidden");
+            mobileMenu.classList.remove("flex");
+          });
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80, // Adjust for header height
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
